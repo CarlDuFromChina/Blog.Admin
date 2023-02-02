@@ -47,7 +47,7 @@ jobs:
         run: |
           cat > .env.prod << eof
           NODE_ENV=production
-          VUE_APP_INDEX_URL=${{ VUE_APP_INDEX_URL }}
+          VUE_APP_INDEX_URL=${{ secrets.VUE_APP_INDEX_URL }}
           VUE_APP_AXIOS_BASE_URL=${{ secrets.VUE_APP_AXIOS_BASE_URL }}
           VUE_APP_MOBILE_URL=${{ secrets.VUE_APP_MOBILE_URL }}
           VUE_APP_TITLE=${{ secrets.VUE_APP_TITLE }}
@@ -65,4 +65,4 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           # 给清单打上多个标签
           tags: |
-            carldu/blog-html-pc:latest
+            carldu/blog-html-admin:latest
