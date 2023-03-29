@@ -1,8 +1,24 @@
 # Blog Admin
 
-> 一个基于 Vue2.0 的博客后台管理项目
+> 一个基于 Vue2.6 的博客后台管理项目，支持`Docker`镜像跨平台部署
 
-## 功能
+主仓库地址：[Sixpence Blog](https://github.com/CarlDuFromChina/Blog)
+
+## 框架介绍
+
+主框架版本：
+
++ vue@2.6.14
++ @vue/cli-service@5.0.8
+
+开发环境：
+
++ nodejs@18.13.0
++ webpack@5.44.0
++ webpack-cli@4.7.2
++ webpack-dev-server@3.11.2
+
+## 功能介绍
 
 + 第三方登录（GitHub、Gitee）
 + 仪表盘
@@ -31,7 +47,7 @@
   - 系统参数
   - 角色管理
 
-## 启动
+## 启动项目
 
 ``` bash
 # install dependencies
@@ -41,17 +57,16 @@ npm install
 npm run dev
 ```
 
-## 生成
+## Docker 发布和部署
 
-> 注：本项目使用`Github Action`自动发布镜像
-
-手动：
+### 发布
 
 ```bash
 docker build -f ".\Dockerfile" -t carldu/blog-html-admin:latest .
+docker push carldu/blog-html-admin:latest
 ```
 
-## 部署
+### 部署
 
 快速部署：
 
