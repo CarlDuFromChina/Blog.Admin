@@ -405,7 +405,7 @@ export default {
             var id = await sp.post('api/post/save', this.data);
             this.$message.success('发布成功！');
             window.onbeforeunload = null;
-            this.$router.push({ name: 'post', params: { id: id } });
+            window.location.href = `${process.env.VUE_APP_INDEX_URL}/post/${id}`;
           } catch (error) {
             this.$message.error(error);
           }
